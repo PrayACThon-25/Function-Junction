@@ -1,0 +1,777 @@
+/* index.css */
+
+/* Global layout styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb; /* Tailwind's gray-50 */
+  color: #1f2937; /* Tailwind's gray-800 */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+/* Optional container class if used in App */
+.app-container {
+  min-height: 100vh;
+}
+
+.main-content {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Elegant Navbar Styles */
+nav {
+  background-color: #2563eb; /* Elegant blue */
+  color: white;
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #e0f2fe;
+}
+
+/* Flex layout for desktop */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Mobile-friendly layout */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Chatbot Container */
+.chatbot-container {
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title */
+.chatbot-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Message area */
+.chatbot-messages {
+  height: 16rem;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Individual message blocks */
+.chatbot-message {
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.chatbot-message.user {
+  justify-content: flex-end;
+  color: #111827;
+}
+
+.chatbot-message.bot {
+  justify-content: flex-start;
+  color: #2563eb;
+}
+
+.chatbot-bubble {
+  display: inline-block;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+/* Typing indicator */
+.typing {
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Input area */
+.chatbot-input-area {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chatbot-input {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+}
+
+.chatbot-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chatbot-button:hover {
+  background-color: #1e40af;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+  .chatbot-title {
+    font-size: 1.5rem;
+  }
+
+  .chatbot-bubble {
+    font-size: 0.9rem;
+  }
+
+  .chatbot-input-area {
+    flex-direction: column;
+  }
+
+  .chatbot-button {
+    width: 100%;
+  }
+}
+/* General layout */
+.home-container {
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* Title & Subtitle */
+.home-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Quiz Card */
+.quiz-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Quiz Title */
+.quiz-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Questions */
+.quiz-question {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Options */
+.quiz-option {
+  display: block;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Button */
+.quiz-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quiz-button:hover {
+  background-color: #1e40af;
+}
+
+/* Result box */
+.result-box {
+  background-color: #d1fae5;
+  border: 1px solid #34d399;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.result-box .result-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.result-box .result-role {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #065f46;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .quiz-card {
+    padding: 1.2rem;
+  }
+
+  .quiz-title {
+    font-size: 1.25rem;
+  }
+
+  .quiz-option {
+    font-size: 0.9rem;
+  }
+
+  .quiz-button {
+    width: 100%;
+  }
+}
+
+/* Mentorship.css */
+
+.mentorship-container {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mentorship-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+.mentorship-description {
+  font-size: 1.125rem;
+  color: #4a5568;
+}
+
+.recommendation-container {
+  padding: 2rem;
+  max-width: 768px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.recommendation-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.recommendation-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.recommendation-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.recommendation-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.recommendation-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.recommendation-button {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recommendation-button:hover {
+  background-color: #1b5e20;
+}
+
+.recommendation-results {
+  margin-top: 2rem;
+}
+
+.recommendation-results h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.recommendation-results ul {
+  padding-left: 1.2rem;
+  color: #444;
+}
+
+.recommendation-results li {
+  margin-bottom: 0.4rem;
+}
+
+/* src/pages/ResumeAnalyzer.css */
+
+.resume-analyzer-container {
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.upload-section {
+  margin-bottom: 2rem;
+}
+
+.sub-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.custom-file-upload {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.custom-file-upload input[type="file"] {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+  z-index: -1;
+}
+
+.upload-label {
+  display: inline-block;
+  background-color: #f97316;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.upload-label:hover {
+  background-color: #c2410c;
+}
+
+.analyze-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.analyze-btn:hover {
+  background-color: #1e40af;
+}
+
+.feedback-section {
+  margin-top: 1.5rem;
+}
+
+.feedback-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-box {
+  background-color: #f1f5f9;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  white-space: pre-wrap;
+}
+
+.generate-section {
+  margin-top: 2rem;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .input-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.input-field {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.generate-btn {
+  margin-top: 1rem;
+  background-color: #16a34a;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.generate-btn:hover {
+  background-color: #15803d;
+}
+
+/* Fade-in animation for recommendations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Optional custom tag style if you don't use Tailwind */
+.recommendation-tag {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.resume-analyzer-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.custom-file-upload {
+  margin: 1rem 0;
+}
+
+.upload-label {
+  background-color: #0ea5e9;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+.analyze-btn,
+.generate-btn {
+  background-color: #10b981;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.analyze-btn:hover,
+.generate-btn:hover {
+  background-color: #059669;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.input-field {
+  padding: 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.feedback-section {
+  margin-top: 2rem;
+}
+
+.feedback-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.feedback-box {
+  background-color: #eef6fc;
+  padding: 1.5rem;
+  border-left: 6px solid #0ea5e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #1e293b;
+  white-space: pre-wrap;
+}
+
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+/* Select Field */
+select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  border-color: #3182ce;
+  outline: none;
+}
+
+/* Mentor List */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+li h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+li p {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #38a169;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #e2e8f0;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2f855a;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Message after booking */
+p.text-blue-600 {
+  color: #3182ce;
+}
+
+p.text-green-600 {
+  color: #48bb78;
+}
+
+/* Booking Form */
+div.mt-6 {
+  background-color: #f7fafc;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3.text-xl {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form .mb-4 {
+  margin-bottom: 16px;
+}
+
+form label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+form input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #3182ce;
+  outline: none;
+}
+
+form button {
+  padding: 12px 24px;
+  background-color: #3182ce;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #2b6cb0;
+}
+
+form button:focus {
+  outline: none;
+}
